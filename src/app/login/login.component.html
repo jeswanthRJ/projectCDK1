@@ -1,1 +1,6 @@
 <p>login works!</p>
+<div class="container">
+    <h2>Get In</h2>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" [(ngModel)]="email">
+    <a (click)=sendOtp(email)>Send OTP-></a>
+</div>

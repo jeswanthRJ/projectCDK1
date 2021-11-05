@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginDetailsService } from '../login-details.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor( private LoginDetalisService:LoginDetailsService) { }
 
   ngOnInit(): void {
   }
-
+  email!: string;
+  sendOtp(mail:string){
+    this.LoginDetalisService.sendOtp(mail);
+  }
 }
